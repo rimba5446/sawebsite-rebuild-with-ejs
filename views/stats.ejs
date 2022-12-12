@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta data-n-head='ssr' charset="utf-8">
+    <meta data-n-head='ssr' name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Head Information -->
+    <title><%= client.user.username %></title>
+    <link data-n-head='ssr' rel='icon' type='image/x-icon' href='<%= client.user.displayAvatarURL({dynamic: true}) %>'>
+
+    <!-- Styles -->
+    <link type='text/css' rel='stylesheet' href='utilities.css'>
+    <link type='text/css' rel='stylesheet' href='common.css'>
+    <link type='text/css' rel='stylesheet' href='index.css'>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous">
+
+    <!-- Meta -->
+    <meta name="robots" content="all" />
+    <meta data-n-head='ssr' data-hid='theme-color' name='theme-color' content='#8f45d9'>
+    <meta data-n-head='ssr' data-hid='og:type' name='og:type' content='website'>
+    <meta data-n-head='ssr' data-hid='og:title' name='og:title' content='404'>
+    <meta data-n-head='ssr' data-hid='og:url' name='og:url' content='http://sayuchan.ezyro.com/404'>
+    <meta data-n-head='ssr' data-hid='og:image' name='og:image'
+        content='http://sayuchan.ezyro.com/assets/logo.png'>
+    <meta data-n-head='ssr' data-hid='description' name='description'
+        content='Page could not be found!'>
+    <meta data-n-head='ssr' data-hid='og:description' name='og:description'
+        content='Sayuchan is a multi-purpose discord bot. Built with love and entertainment in mind to keep your discord members busy and active. But it does not stop there...'>
+
+</head>
+
+<body style='background-color: #292a2e'>
+    <!-- Preloader -->
+
+    <body class='preload'></body>
+
+    <!-- Header -->
+    <div class='navbar'>
+        <div class='container full flex'>
+            <a href='/' class='logo flex'>
+                <img src='<%= client.user.displayAvatarURL({dynamic: true}) %>' alt='Sayuchan Logo'>
+                <p class='title'><%= client.user.username %></p>
+            </a>
+            <nav>
+                <ul>
+                    <li><a class='button' href='commands'><span>Commands</span></a></li>
+                    <li><a class='button' href='docs'><span>Information</span></a></li>
+                    <li><a class='button currentPage' href='stats'><span>Stats</span></a></li>
+                    <li><a class='button' href='invite'><span>Invite <%= client.user.username %></span></a></li>
+                    <li><a class='button' href='support'><span>Support</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Showcase -->
+    <center>
+    <div class="row">
+        <div class="column">
+          <div class="card">
+            <p><i class="fa fa-user"></i></p>
+            <h3><%= client.users.cache.size %></h3>
+            <p>Members</p>
+          </div>
+        </div>
+      
+        <div class="column">
+          <div class="card">
+            <p><i class="fa fa-users"></i></p>
+            <h3><%= client.guilds.cache.size %></h3>
+            <p>Guilds</p>
+          </div>
+        </div>
+      
+        <div class="column">
+          <div class="card">
+            <p><i class="fa fa-check"></i></p>
+            <h3><%= status.status  %></h3>
+            <p>Project</p>
+          </div>
+        </div>
+      </div> 
+    </center>
+    <!-- Footer -->
+    <div class='footer'>
+        <div class='container full grid'>
+            <div class='branding'>
+                <h4><%= client.user.username %></h4>
+                <p>Copyright &copy; 2021-2022</p>
+            </div>
+            <div class='flex'>
+                <div class='footernav'>
+                    <ul>
+                        <li><a class='button' href='/'><span>Home</span></a></li>
+                        <li><a class='button' href='commands'><span>Commands</span></a></li>
+                        <li><a class='button' href='docs'><span>Information</span></a></li>
+                    </ul>
+                </div>
+                <div class='footernav'>
+                    <ul>
+                        <li><a class='button' href='stats'><span>Stats</span></a></li>
+                        <li><a class='button' href='support'><span>Support Server</span></a></li>
+                        <li><a class='button' href='invite'><span>Invite <%= client.user.username %></span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script>$(window).load(function () { 'body'.removeClass('.preload'); });</script>
+</body>
+
+</html>

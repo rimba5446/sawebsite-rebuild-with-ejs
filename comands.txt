@@ -1,0 +1,47 @@
+s!clear
+Clears the server queue
+
+s!help
+Displays all server commands
+
+s!loop <mode> = sudah
+Loops the server queue
+
+s!lyrics <name>
+Displays the lyrics of the current or specified song
+
+s!nowplaying = Sudah
+Displays information about the song currently playing
+
+s!pause = sudah
+Pauses the queue
+
+s!ping = sudah 
+Shows the ping of the bot
+
+s!play <song> = sudah
+Searches for a song
+
+s!playactivty = sudah
+Playactivity Sayuchan!
+
+s!playlist <playlist> =  sudah
+The song specified playlist
+
+s!queue =sudah
+Displays the server queue
+
+s!save = sudah
+Sends a private message to you with information about the current playing song
+
+s!skip = sudah
+Skips to the next song in the queue
+
+s!stop =sudah 
+Disconnects from the music channel and clears the server queue
+
+s!support = sudah
+Displays associated links
+
+s!volume <level> = sudah
+Adjusts the bot volume
