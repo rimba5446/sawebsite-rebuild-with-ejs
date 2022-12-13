@@ -1,8 +1,8 @@
 # RaykujanK13
-This is the Legacy Website for Sayuchan the Discord Bot.
+Rebuild Website for Sayuchan the Discord Bot.
 
 ## View the Sayuchan website here!
-http://sayuchan.ezyro.com/
+http://sayuchan-app.glitch.me
 
 # Github
 htpps://github.com/rimba5446
