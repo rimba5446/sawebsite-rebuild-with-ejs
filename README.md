@@ -2,7 +2,7 @@
 Rebuild Website for Sayuchan the Discord Bot.
 
 # PLEASE READ THIS NOTE
-Note: untuk update selanjutnya source code tidak akan di publikasikan dan untuk versi vanilla kami akan tetap open source
+Note: for the next update the source code will not be published and for the vanilla version we will remain open source
 
 #Vanilla Version
 https://github.com/rimba5446/sayuchan-website
