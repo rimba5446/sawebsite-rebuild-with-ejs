@@ -8,7 +8,7 @@ Note: for the next update the source code will not be published and for the vani
 https://github.com/rimba5446/sayuchan-website
 
 ## View the Sayuchan website here!
-http://sayuchan-app.glitch.me (UPDATE REBUILD V1.4.2)
+http://sayuchan-app.glitch.me (THERE WILL BE LATEST UPDATES REBUILD V1.5.4)
 
 # Github
 htpps://github.com/rimba5446
