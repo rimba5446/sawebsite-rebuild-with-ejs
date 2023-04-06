@@ -19,6 +19,12 @@ h3 {
 	text-align: center;
 }
 
+
+img {
+	border-radius: 50%;
+  }
+  
+
 /* Quick Start */
 .quickstart ol {
 	margin: 5px 25px;

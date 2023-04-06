@@ -1,4 +1,8 @@
 {
-    "token": "OTg0NzUzNDg2NDE3NzY0MzYy.GUXSTH.mxrX4h4ls9HY7cVKzZaErNDaWZ0XRQYuLPib4I"
+    "token": "MTA1MjkzODc4Mjg2Njk1MjIwMw.Gert7H.XIMavGtlTROjSt1w9LXlC5BcxCaOz3sOf7HHMU",
+    "client_port":"3000",
+    "prefix":"s!",
+    "url_server":"https://dsc.gg/rzgroup",
+    "url_invite":"https://discord.com/api/oauth2/authorize?client_id=865483929610879026&permissions=8&scope=bot%20applications.commands"
   }
   

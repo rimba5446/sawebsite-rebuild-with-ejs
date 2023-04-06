@@ -6,7 +6,7 @@
     <meta data-n-head='ssr' name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Head Information -->
-    <title><%= client.user.username %></title>
+    <title><%= client.user.username %> - Stats</title>
     <link data-n-head='ssr' rel='icon' type='image/x-icon' href='<%= client.user.displayAvatarURL({dynamic: true}) %>'>
 
     <!-- Styles -->
@@ -64,34 +64,81 @@
         <div class="column">
           <div class="card">
             <p><i class="fa fa-user"></i></p>
-            <h3><%= client.users.cache.size %></h3>
             <p>Members</p>
+            <h3><%= client.users.cache.size %></h3>
           </div>
         </div>
-      
         <div class="column">
           <div class="card">
             <p><i class="fa fa-users"></i></p>
-            <h3><%= client.guilds.cache.size %></h3>
             <p>Guilds</p>
+            <h3><%= client.guilds.cache.size %></h3>
           </div>
         </div>
       
         <div class="column">
           <div class="card">
             <p><i class="fa fa-check"></i></p>
-            <h3><%= status.status  %></h3>
             <p>Project</p>
+            <h3><%= status.status  %></h3>
           </div>
         </div>
+
+        <div class="column">
+            <div class="card">
+              <p><i class="fas fa-table-tennis"></i></p>
+              <p>Ping (Latency)</p>
+              <h3><%= client.ws.ping || 0 %>ms</h3>
+            </div>
+          </div>
       </div> 
+
+        <div class="column">
+            <div class="card">
+              <p><i class="fa fa-clock"></i></p>
+              <p>Uptime</p>
+              <h3><%= uptime %></h3>
+            </div>
+          </div>
+      </div> 
+
+        <div class="column">
+              <div class="card">
+                <p><i class="fa fa-code"></i></p>
+                <p>Node.Js Version</p>
+                <h3><%= process.version %></h3>
+              </div>
+            </div>
+        </div> 
+
+          <!-- <div class="column">
+            <div class="card">
+              <p><i class="fa fa-clock"></i></p>
+              <p>Discord.Js Version</p>
+              <h3>v<%= djsVersion %></h3>
+            </div>
+          </div>
+      </div>  -->
+
+      <div class="column">
+        <div class="card">
+          <p><i class="fa fa-laptop"></i></p>
+          <p>Usage</p>
+          <h3><ul>
+            <li>Memory: <%= (process.memoryUsage().rss / 1024 / 1024).toFixed(2) %> MB</li>
+            <li>CPU: <%= (process.cpuUsage().system / 1024 / 1024).toFixed(2) %>%</li>
+            <li>Node CPU: <%= (process.cpuUsage().user / 1024 / 1024).toFixed(2) %>%</li>
+        </ul></h3>
+        </div>
+      </div>
     </center>
+    
     <!-- Footer -->
     <div class='footer'>
         <div class='container full grid'>
             <div class='branding'>
                 <h4><%= client.user.username %></h4>
-                <p>Copyright &copy; 2021-2022</p>
+                <p>Copyright &copy; 2021-<script>document.write(new Date().getFullYear())</script></p>
             </div>
             <div class='flex'>
                 <div class='footernav'>

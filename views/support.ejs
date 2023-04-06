@@ -5,12 +5,14 @@
     <meta data-n-head='ssr' charset="utf-8">
     <meta data-n-head='ssr' name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Redirect -->
+    <meta http-equiv="Refresh" content="0; url='<%= url_server  %>'" />
+
     <!-- Head Information -->
-    <title><%= client.user.username %></title>
+    <title><%= client.user.username %> - Support</title>
     <link data-n-head='ssr' rel='icon' type='image/x-icon' href='<%= client.user.displayAvatarURL({dynamic: true}) %>'>
 
     <!-- Styles -->
-    <!-- <link type='text/css' rel='stylesheet' href='bootstrap/css/bootstrap.min.css'> -->
     <link type='text/css' rel='stylesheet' href='utilities.css'>
     <link type='text/css' rel='stylesheet' href='common.css'>
     <link type='text/css' rel='stylesheet' href='index.css'>
@@ -21,16 +23,16 @@
         crossorigin="anonymous">
 
     <!-- Meta -->
+    <meta name="robots" content="all" />
     <meta data-n-head='ssr' data-hid='theme-color' name='theme-color' content='#8f45d9'>
     <meta data-n-head='ssr' data-hid='og:type' name='og:type' content='website'>
-    <meta data-n-head='ssr' data-hid='og:title' name='og:title' content='Sayuchan - Discord Bot!'>
-    <meta data-n-head='ssr' data-hid='og:url' name='og:url' content='http://sayuchan.ezyro.com'>
+    <meta data-n-head='ssr' data-hid='og:title' name='og:title' content='Join Support Server'>
+    <meta data-n-head='ssr' data-hid='og:url' name='og:url' content='http://sayuchan.ezyro.com/support.html'>
     <meta data-n-head='ssr' data-hid='og:image' name='og:image'
         content='http://sayuchan.ezyro.com/assets/logo.png'>
-    <meta data-n-head='ssr' data-hid='description' name='description'
-        content='Sayuchan is the best Music Bot Discord Invite Now.'>
+    <meta data-n-head='ssr' data-hid='description' name='description' content='Join the Sayuchan Support Server!'>
     <meta data-n-head='ssr' data-hid='og:description' name='og:description'
-        content='Sayuchan is the best Music Bot Discord Invite Now.'>
+        content='Sayuchan is the best Music Bot Discord Invite Now'>
 
 </head>
 
@@ -50,9 +52,9 @@
                 <ul>
                     <li><a class='button' href='commands'><span>Commands</span></a></li>
                     <li><a class='button' href='docs'><span>Information</span></a></li>
-                    <li><a class='button' href='stats'><span>Stats</span></a></li>
+                    <li><a class='button' href='donation'><span>Stats</span></a></li>
                     <li><a class='button' href='invite'><span>Invite <%= client.user.username %></span></a></li>
-                    <li><a class='button' href='support'><span>Support</span></a></li>
+                    <li><a class='button currentPage' href='support'><span>Support</span></a></li>
                 </ul>
             </nav>
         </div>
@@ -62,37 +64,16 @@
     <div class='showcase'>
         <div class='container flex'>
             <div class='showcase-text'>
-                <h1><%= client.user.username %> - Discord Bot!</h1>
-                <p>Made with love to be the glue to your community. Keep your community together and active!</p>
+                <h1>Redirecting...</h1>
+                <p>If you are not automatically redirected please click the button below to Join the RZ Group Developer Support
+                    Server!</p>
                 <div class='buttons flex'>
-                    <a class='button btn btn-blurple' href='invite'><span><i class="fab fa-discord fa-2x"></i> Add
-                            to Discord</span></a>
-                    <a class='button btn btn-blurple' href='support'><span>Get Support</span></a>
+                    <a class='button btn' href='<%= url_server  %>'><span>Join Support Server</span></a>
                 </div>
             </div>
         </div>
     </div>
-    <!-- bot stats -->
-    <!-- <div style="background-color: var(--background);"><div style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-41.53,-9.56 C167.83,173.98 302.14,-60.89 534.09,89.10 L500.00,0.00 L0.00,0.00 Z" style="stroke: none; fill: var(--secondary);"></path></svg></div></div> -->
-        <!-- bot stats -->
-    <div class="changelog card">
-        <div class="title">
-            <center>
-            <div class="showcase-text">
-                <h1>RaeiZers Group Developer Discord Server</h1>
-            </div>
-            </center>
-            <center>
-                <div class="thr">
-                    <hr>
-                </div>
-            </center>
-        </div>
-        
-        <iframe src="https://discord.com/widget?id=703893759187746846&theme=dark" width="100%" height="589"
-            allowtransparency="true" frameborder="0"
-            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-    </div>
+
     <!-- Footer -->
     <div class='footer'>
         <div class='container full grid'>
@@ -118,6 +99,7 @@
             </div>
         </div>
     </div>
+
     <!-- Scripts -->
     <script>$(window).load(function () { 'body'.removeClass('.preload'); });</script>
 </body>

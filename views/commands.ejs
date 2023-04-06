@@ -64,11 +64,11 @@
                 <h2>COMMAND PREFIX</h2>
                 <div class='flex'>
                     <p>The default prefix is </p>
-                    <pre><code> <%= prefix.prefix  %> </code></pre>
+                    <pre><code> <%= prefix  %> </code></pre>
                 </div>
                 <div class='flex'>
                     <p>Command Example: </p>
-                    <pre><code><%= prefix.prefix  %>help</code></pre>
+                    <pre><code><%= prefix  %>help</code></pre>
                 </div>
             </div>
             <div class='commandSyntax'>
@@ -256,13 +256,16 @@
         </div>
     </div>
 
-
+    <br>
+                        <br>
+                        <br>
+                        <br>
     <!-- Footer -->
     <div class='footer'>
         <div class='container full grid'>
             <div class='branding'>
                 <h4><%= client.user.username %></h4>
-                <p>Copyright &copy; 2021-2022</p>
+                <p>Copyright &copy; 2021-<script>document.write(new Date().getFullYear())</script></p>
             </div>
             <div class='flex'>
                 <div class='footernav'>

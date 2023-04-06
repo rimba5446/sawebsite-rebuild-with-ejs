@@ -49,7 +49,7 @@
                     <li><a class='button' href='commands'><span>Commands</span></a></li>
                     <li><a class='button currentPage' href='/docs'><span>Information</span></a></li>
                     <li><a class='button' href='stats'><span>Stats</span></a></li>
-                    <li><a class='button' href='invite'><span>Invite Sayuchan</span></a></li>
+                    <li><a class='button' href='invite'><span>Invite <%= client.user.username %></span></a></li>
                     <li><a class='button' href='support'><span>Support</span></a></li>
                 </ul>
             </nav>
@@ -62,12 +62,12 @@
         <h2>Quick Start Guide</h2>
         <div class='container flex'>
             <ol>
-                <li> (<a href='/invite'><i>Invite Sayuchan to your guild!</i></a> )
+                <li> (<a href='invite'><i>Invite Sayuchan to your guild!</i></a> )
                 </li>
                 <li>
                     <div class='flex combine'>
                         <p>The default prefix is</p>
-                        <pre><code><%= prefix.prefix  %></code></pre>
+                        <pre><code><%= prefix  %></code></pre>
                         <p></p>
                     </div>
                 </li>
@@ -81,21 +81,7 @@
         <h2>About</h2>
         <div class='container flex'>
             <p>
-                Your boy Cy started <b>Disconnect</b> to learn coding but ended up turning into something <i>absolutely
-                    incredible</i>.
-                He released it to the public, and learned from the steady growth that he was in the right direction
-                <del>and that the public had <i>pretty</i> good taste hehe</del>.
-                And so he continued to rock a service people loved and adored which turned into this bot of
-                <i>awesomeness</i> before you!
-                So far it's been a really fun solo project for Cy and he wishes to share that fun by allowing everyone
-                to <b>invite the bot to your server!</b>
-            </p>
-            <p>
-                To make it even squeaky clean, the Disconnect bot has been rewritten for you to have the
-                <i>smoothest</i> time <b>generating pictures of cute dogs</b>,
-                <b>memeing out</b>, and staking your lives on a <b>legit game of coin flip</b> or <b>rock, paper,
-                    scissors</b> with your buddies!
-                And yeah, it'll always stay up to date on those <i>silly API switches</i>!
+            <%= contentUpdate1 %>
             </p>
         </div>
     </section> -->
@@ -103,17 +89,22 @@
     <!-- Latest -->
     <section class='changelog card'>
         <h2>Catalog Updates</h2>
-        <h3>Sayuchan New Revised 1.2.2</h3>
+        <h3><%= titleUpdate %></h3>
         <div class='container flex'>
             <ul>
                 <li>
-                    <p><i>If you want to see all catalog updates sayuchan please go to our official discord and you can also request for future updates <a
-                        href='support'>RZGroup Support Server Here!</a></i></p>
+                    <p><%= contentUpdate1 %></p>
+                </li>
+                <li>
+                    <p><%= contentUpdate2 %></p>
+                </li>
+                <li>
+                    <p><%= contentUpdate3 %></p>
                 </li>
             </ul>
         </div>
-        <!-- <p><i>Have an idea or feature in mind you want to see on Sayuchan Revised Channel? Request it on the <a
-                    href='support'>RZGroup Support Server Here!</a></i></p> -->
+        <p><i>Have an idea or feature in mind you want to see on Sayuchan Revised Channel? Request it on the <a
+                    href='support'>RZGroup Support Server Here!</a></i></p>
     </section>
 
     <!-- Developers -->
@@ -121,8 +112,9 @@
         <h2>Developers</h2>
         <div class='container flex'>
             <div class='card'>
-                <h3>RaykujanK13</h3>
-                <p>Hello, I'm RaykujanK13! Creator of Sayuchan and this website! Thank you for using Sayuchan and I hope it lives up to your expectations!</p>
+                <center><img src="https://i.ibb.co/v4MtBN6/63f85081689f1.gif" alt="Avatar"></center>
+                <h3><%= titleAbout  %></h3>
+                <p><%= contentAbout %></p>
                 <br>
                 <h4>Check Me Out Below!</h4>
                 <div class='media'>
@@ -140,7 +132,7 @@
         <div class='container full grid'>
             <div class='branding'>
                 <h4><%= client.user.username %></h4>
-                <p>Copyright &copy; 2021-2022</p>
+                <p>Copyright &copy; 2021-<script>document.write(new Date().getFullYear())</script></p>
             </div>
             <div class='flex'>
                 <div class='footernav'>
